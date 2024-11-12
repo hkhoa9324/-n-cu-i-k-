@@ -22,3 +22,5 @@ jobs:
           platforms: linux/amd64,linux/arm64
           push: true
           tags: ${{ vars.DOCKER_USERNAME }}/${{ github.event.repository.name }}:latest
+          context: .  # The build context, typically the root directory of the repository
+          file: doancuoiky/Dockerfile  # Specify the correct path to the Dockerfile
